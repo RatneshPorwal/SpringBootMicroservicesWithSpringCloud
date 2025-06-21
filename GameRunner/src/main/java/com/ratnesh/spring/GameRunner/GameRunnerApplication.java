@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.ratnesh.spring.GameRunner.game.GameRunner;
 import com.ratnesh.spring.GameRunner.game.MarioGame;
 import com.ratnesh.spring.GameRunner.game.SuperContraGame;
+import com.ratnesh.spring.GameRunner.game.Pacman;
+import com.ratnesh.spring.GameRunner.game.GameConsole;
 
 @SpringBootApplication
 public class GameRunnerApplication {
@@ -13,7 +15,7 @@ public class GameRunnerApplication {
 	public static void main(String[] args) {
 		//SpringApplication.run(GameRunnerApplication.class, args);
 		//MarioGame game=new MarioGame();
-		SuperContraGame game= new SuperContraGame();
+		GameConsole game= new Pacman();
 		GameRunner gameRunner=new GameRunner(game);
 				gameRunner.run();
 	}

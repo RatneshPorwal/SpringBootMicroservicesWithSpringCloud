@@ -1,6 +1,6 @@
 package com.ratnesh.spring.GameRunner.game;
 
-public class MarioGame {
+public class MarioGame implements GameConsole {
 	
 	public void up() {
 		System.out.println("up");

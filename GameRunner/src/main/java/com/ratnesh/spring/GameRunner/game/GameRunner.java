@@ -2,35 +2,19 @@ package com.ratnesh.spring.GameRunner.game;
 
 public class GameRunner {
 
-	MarioGame marioGame;
-	SuperContraGame superContraGame;
-	public GameRunner(MarioGame marioGame) {
-		this.marioGame=marioGame;
+	GameConsole game;
+	
+	public GameRunner(GameConsole game) {
+		this.game=game;
 	}
 
-	public GameRunner(SuperContraGame superContraGame) {
-		this.superContraGame=superContraGame;
-	}
-
-	/*
-	 * public void run() { marioGame.up(); marioGame.down(); marioGame.left();
-	 * marioGame.down();
-	 * 
-	 * 
-	 * 
-	 * 
-	 * }
-	 */
 	
 	public void run() {
-		superContraGame.up();
-		superContraGame.down();
-		superContraGame.left();
-		superContraGame.down();
+		game.up();
+		game.down();
+		game.left();
+		game.down();
 
-
-		
-		
 	}
 
 }
