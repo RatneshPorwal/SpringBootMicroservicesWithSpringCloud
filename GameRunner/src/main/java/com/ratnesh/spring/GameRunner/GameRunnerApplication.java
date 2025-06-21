@@ -7,6 +7,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import com.ratnesh.spring.GameRunner.game.GameRunner;
 import com.ratnesh.spring.GameRunner.game.MarioGame;
 import com.ratnesh.spring.GameRunner.game.SuperContraGame;
+import com.ratnesh.spring.GameRunner.web.controller.GameController;
 import com.ratnesh.spring.GameRunner.game.Pacman;
 import com.ratnesh.spring.GameRunner.game.GameConsole;
 
@@ -21,8 +22,10 @@ public class GameRunnerApplication {
 		//GameRunner gameRunner=new GameRunner(game); Step 2
 		
 		GameRunner gameRunner=context.getBean(GameRunner.class);
-		
 		gameRunner.run();
+		
+		GameController gameController=context.getBean(GameController.class);
+		System.out.println(gameController.getGame(0));
 	}
 
 }
