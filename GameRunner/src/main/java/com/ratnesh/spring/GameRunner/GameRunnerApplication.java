@@ -25,7 +25,7 @@ public class GameRunnerApplication {
 		gameRunner.run();
 		
 		GameController gameController=context.getBean(GameController.class);
-		System.out.println(gameController.getGame(0));
+		System.out.println(gameController.getGame(2));
 	}
 
 }

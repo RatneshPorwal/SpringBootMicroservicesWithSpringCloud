@@ -2,7 +2,7 @@ package com.ratnesh.spring.GameRunner.game;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class SuperContraGame implements GameConsole{
 	
 	public void up() {

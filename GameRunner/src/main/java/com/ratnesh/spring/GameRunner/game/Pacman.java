@@ -1,5 +1,10 @@
 package com.ratnesh.spring.GameRunner.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class Pacman implements GameConsole {
 	
 	public void up() {
