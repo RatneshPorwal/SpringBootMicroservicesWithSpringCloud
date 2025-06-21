@@ -1,0 +1,20 @@
+package com.ratnesh.spring.GameRunner.game;
+
+public class SuperContraGame {
+	
+	public void up() {
+		System.out.println("Super up");
+	}
+	
+	public void down() {
+		System.out.println("Super down");
+	}
+
+	public void left() {
+		System.out.println("Super left");
+	}
+	
+	public void right() {
+		System.out.println("Super right");
+	}
+}
