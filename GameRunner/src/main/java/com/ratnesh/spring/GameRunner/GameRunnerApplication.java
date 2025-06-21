@@ -2,6 +2,7 @@ package com.ratnesh.spring.GameRunner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import com.ratnesh.spring.GameRunner.game.GameRunner;
 import com.ratnesh.spring.GameRunner.game.MarioGame;
@@ -13,11 +14,15 @@ import com.ratnesh.spring.GameRunner.game.GameConsole;
 public class GameRunnerApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(GameRunnerApplication.class, args);
+		ConfigurableApplicationContext context= SpringApplication.run(GameRunnerApplication.class, args);
+		
 		//MarioGame game=new MarioGame();
-		GameConsole game= new Pacman();
-		GameRunner gameRunner=new GameRunner(game);
-				gameRunner.run();
+		//GameConsole game= new Pacman(); Step 1
+		//GameRunner gameRunner=new GameRunner(game); Step 2
+		
+		GameRunner gameRunner=context.getBean(GameRunner.class);
+		
+		gameRunner.run();
 	}
 
 }
