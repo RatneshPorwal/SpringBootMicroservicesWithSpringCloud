@@ -5,15 +5,21 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class MyMathTest {
+	
+	private MyMath myMath=new MyMath();
+
 
 	@Test
-	void test() {
-		int[] numbers= {1,2,3};
-		MyMath myMath=new MyMath();
-		int result=myMath.calculateSum(numbers);
-		int expectedResult=6;
-		assertEquals(expectedResult, result);
+	void testCalculateSum_ThreeNumbers() {
+		assertEquals(6, myMath.calculateSum(new int[] {1,2,3}));
 		
 	}
 
+	
+	@Test
+	void testCalculateSum_NoNumbers() {
+		int result=myMath.calculateSum(new int[] {});
+		assertEquals(0, result);
+		
+	}
 }
