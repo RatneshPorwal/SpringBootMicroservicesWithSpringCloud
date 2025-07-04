@@ -25,4 +25,10 @@ class MyMathTest {
 		assertFalse(courses.contains("GCP"));
 		
 	}
+	
+	@Test
+	void testAssertEqual_coursesLength() {
+		assertEquals(3,courses.size());
+		
+	}
 }
